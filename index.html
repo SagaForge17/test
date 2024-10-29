@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flash Projector Creator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        form {
+            margin: 20px 0;
+        }
+        input[type="file"] {
+            margin: 10px 0;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Create Flash Projector</h1>
+    <p>Upload a copy of Flash Player and your SWF file to create a projector.</p>
+    <form action="upload.php" method="POST" enctype="multipart/form-data">
+        <label for="flashPlayer">Upload Flash Player:</label><br>
+        <input type="file" id="flashPlayer" name="flashPlayer" accept=".exe, .zip" required><br>
+
+        <label for="swfFile">Upload SWF File:</label><br>
+        <input type="file" id="swfFile" name="swfFile" accept=".swf" required><br>
+
+        <input type="submit" value="Create Projector">
+    </form>
+</body>
+</html>
